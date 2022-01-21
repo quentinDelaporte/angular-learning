@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { GamesComponent } from '../../containers/games/games.component';
 import { Game } from '../../containers/games/models/game';
 
 @Component({
@@ -15,4 +14,5 @@ export class GameListItemComponent {
   selectGame(game: Game): void {
     this.onGameClicked.emit(game);
   }
+
 }

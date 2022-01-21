@@ -1,7 +1,11 @@
-<p>game-details works!</p>
+<header>
+  <h1 class="mainTitle">Twiick</h1>
+</header>
 
-<app-basic-game-infos
-  [id]="1"
-  [console]="'console'"
-  [name]="'mario'"
-></app-basic-game-infos>
+<h1 class="liner">Détails</h1>
+
+<div *ngFor="let game of gameList">
+  <div *ngIf="game.id == id">
+    <app-basic-game-infos [game]="game"></app-basic-game-infos>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Game } from '../../containers/games/models/game';
 
 @Component({
   selector: 'app-basic-game-infos',
@@ -6,7 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./basic-game-infos.component.scss'],
 })
 export class BasicGameInfosComponent {
-  @Input() id!: number;
-  @Input() console!: string;
-  @Input() name!: string;
+  @Input() game!: Game;
 }
