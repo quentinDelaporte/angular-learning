@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Game } from './models/game';
 
 @Component({
   selector: 'app-games',
@@ -12,7 +13,7 @@ export class GamesComponent {
     { id: 3, name: 'Super smash bros ultimate', console: 'Switch' },
     { id: 4, name: 'Valorant', console: 'PC' },
   ];
-  showDetails(game: GamesComponent): void {
+  showDetails(game: Game): void {
     console.log(game);
   }
 }

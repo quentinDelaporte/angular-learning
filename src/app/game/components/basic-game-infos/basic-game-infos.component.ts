@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./basic-game-infos.component.scss'],
 })
 export class BasicGameInfosComponent {
-  @Input() id: any;
-  @Input() console: any;
-  @Input() name: any;
+  @Input() id!: number;
+  @Input() console!: string;
+  @Input() name!: string;
 }
