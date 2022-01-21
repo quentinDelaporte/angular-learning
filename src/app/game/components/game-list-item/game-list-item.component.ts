@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GamesComponent } from '../../containers/games/games.component';
 
 @Component({
   selector: 'app-game-list-item',
@@ -6,5 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./game-list-item.component.scss'],
 })
 export class GameListItemComponent {
-  @Input() gameList: any;
+  @Input() game: any;
+  @Output() onGameClicked: EventEmitter<GamesComponent> = new EventEmitter();
+
+  selectGame(game: GamesComponent): void {
+    console.log(game);
+    this.onGameClicked.emit(game);
+  }
+
+
 }

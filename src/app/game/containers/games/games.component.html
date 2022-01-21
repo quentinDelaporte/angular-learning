@@ -1,1 +1,17 @@
-<app-game-list-item [gameList]="gameList"></app-game-list-item>
+<header>
+  <h1 class="mainTitle">Twiick</h1>
+</header>
+
+<h1 class="liner">Liste des jeux</h1>
+<div *ngIf="gameList.length > 0; then listeJeux; else listeVide"></div>
+<ng-template #listeJeux>
+  <div id="gameContainer">
+    <div *ngFor="let game of gameList" class="gameCard">
+      <app-game-list-item
+        [game]="game"
+        (onGameClicked)="showDetails($event)"
+      ></app-game-list-item>
+    </div>
+  </div>
+</ng-template>
+<ng-template #listeVide></ng-template>

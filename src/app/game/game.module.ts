@@ -8,7 +8,12 @@ import { BasicGameInfosComponent } from './components/basic-game-infos/basic-gam
 import { GameListItemComponent } from './components/game-list-item/game-list-item.component';
 
 @NgModule({
-  declarations: [GamesComponent, GameDetailsComponent, BasicGameInfosComponent, GameListItemComponent],
+  declarations: [
+    BasicGameInfosComponent,
+    GameListItemComponent,
+    GamesComponent,
+    GameDetailsComponent,
+  ],
   imports: [CommonModule, GameRoutingModule],
 })
 export class GameModule {}
