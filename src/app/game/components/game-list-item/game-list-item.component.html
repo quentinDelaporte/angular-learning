@@ -1,0 +1,14 @@
+<div *ngIf="gameList.length > 0; then listeJeux; else listeVide"></div>
+<ng-template #listeJeux>
+  <table>
+    <tr>
+      <th>Nom</th>
+      <th>Console</th>
+    </tr>
+    <tr *ngFor="let game of gameList">
+      <td>{{ game.name }}</td>
+      <td>{{ game.console }}</td>
+    </tr>
+  </table></ng-template
+>
+<ng-template #listeVide></ng-template>
